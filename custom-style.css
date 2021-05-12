@@ -723,10 +723,15 @@ background-image: none;
     padding-top: 0;
 }
 .section-portfolio-1 .portfolio-item {
-    margin-bottom: 25px;
+   width: 80%;
+    margin: 0 auto 30px auto;
 }
 
 
+.about-img img {
+    max-width: 100%;
+    padding-top: 0;
+}
 
 
 
