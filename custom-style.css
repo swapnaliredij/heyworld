@@ -726,7 +726,9 @@ background-image: none;
    width: 80%;
     margin: 0 auto 30px auto;
 }
-
+#contacts {
+    padding: 40px 20px;
+}
 
 .about-img img {
     max-width: 100%;
