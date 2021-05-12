@@ -698,7 +698,7 @@ display: initial;
 .slidersec .container {
 background-image: none;
 }
-.slidersec h1 { font-size: 30px;padding-left: 15px;}
+.slidersec h1 { font-size: 24px;padding-left: 15px;}
 .slidersec h2 {  padding-left: 15px;margin: 30px 20px 50px 0px;}
 .slidersec .slidebtn { margin-left: 15px;}
 .menu-style .header>.logo {
