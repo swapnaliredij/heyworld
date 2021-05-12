@@ -1,170 +1,512 @@
-<!DOCTYPE html> 
-<html lang="en-US">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>On hover bg img scroll</title>
-<style type="text/css">
-.text-img {
-    -webkit-text-fill-color: transparent;
-    background: -webkit-linear-gradient(transparent, transparent);
-    background: -o-linear-gradient(transparent, transparent);
-    background: url('pexels-photo.jpeg') repeat;
-    -webkit-background-clip: text;
-    background-position-y: 40%;
-    animation: imgPos 4s linear normal infinite paused;
-    letter-spacing: .05em;
-    display: inline-block;
-    overflow: hidden;
-    font-size: 400px;
-    line-height: 85%;
-    font-weight: 500;
-    height: 280px;
-    font-family: "Teko", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    color: #151515;
-}
-.text-img > span {
-    pointer-events: none;
-}
-.text-img:hover {
-		animation-play-state: running;
-		color: red;
-	}
-.animated {
-    animation-duration: .7s;
-    animation-fill-mode: both;
-    opacity: 1;
-}
-@keyframes imgPos{
-	0%{ background-position-x:0 }
-	50%{ background-position-x:100%;  }
-	100%{ background-position-x:0;  }
-}
-/**********************************************/
-.number-img{
-	-webkit-text-fill-color:transparent;
-	background: url('vertical.jpg') no-repeat center center;
-	-webkit-background-clip: text;
-	background-position-y: 40%;
-	display: inline-block;
-    overflow: hidden;
-    font-family: "Teko", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-size: 230px;
-	font-weight: bold;
-	letter-spacing: .05em;
-	animation: numbgscroll 12s infinite linear;
-}
-@keyframes numbgscroll{
-	0%{ background-position-y: 0; }
-	50%{ background-position-y: 100%;  }
-	100%{ background-position-y:0;  }
-}
-.number-img:hover{
-	animation-play-state: paused;
-}
-/************************/
-.bond-iconbox.have-bg {
-    padding: 48px 0 24px;
-    text-align: center;
-    margin-bottom: 50px;
-    background: #ff4040;
-    color: #fff;
-}
-.bond-iconbox.have-bg .icon-image {
-    margin-bottom: 27px;
-}
-.bond-iconbox .icon-image {
-    width: 60px;
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 17px;
-}
-.bond-iconbox.have-bg span{
-	display: inline-block;
-	font-size: 60px;
-    line-height: 60px;
-    -webkit-transition: all 0.4s ease-in-out 0s;
-    -moz-transition: all 0.4s ease-in-out 0s;
-    -ms-transition: all 0.4s ease-in-out 0s;
-    -o-transition: all 0.4s ease-in-out 0s;
-    transition: all 0.4s ease-in-out 0s;
-}
-.bond-iconbox.have-bg:hover span {
-    -webkit-transform: rotateY(-180deg);
-    -ms-transform: rotateY(-180deg);
-    transform: rotateY(-180deg);
-}
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SRR | Web Designer | UI/UX Designer</title>
+
+<link rel="shortcut icon" type="image/png" href="images/icon.png"/>
+<!-- Font Awsome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<!-- custom -->
+<link href="css/custom-style.css" rel="stylesheet">
+
+<!-- Circle scrolling --->
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+ <script src="js/circletype.min.js"></script>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
 
-</style>
 
 </head>
+<body>
 
-<body >
+<!-- navigation -->
+    <header class="menu-style" id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header">
+                        <div class="mycol-1 col-md-3 col-xs-5 logo">
+                            <a href="index.php">  SRRedij  </a>
+                        </div>
+
+                        <div class="mycol-3 col-md-8 col-xs-7 right-side">
+                            <div class="navigation">
+              								<nav  class="navbar navbar-inverse">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                      <span class="icon-bar"></span>
+                                      <span class="icon-bar"></span>
+                                      <span class="icon-bar"></span>                        
+                                    </button>
+                                </div>
+                                <div class="collapse navbar-collapse" id="myNavbar">
+              								    <ul class="custom main-menu nav navbar-nav" >
+            								        <li class="active menu-item">
+            								            <a href="index.php">Home</a>
+            								        </li>
+            								        <!-------------------------------------------------------->
+            								        <li class=" menu-item">
+            								            <a href="#aboutme">About Me</a>
+            								        </li>
+            								        <!-------------------------------------------------------->
+            								        <li class=" menu-item ">
+            								            <a href="#portfolio"> Portfolio</a>
+            								        </li>	
+            								        <!-------------------------------------------------------->
+            								        <li class=" menu-item">
+            								            <a href="#contacts">Contacts</a>
+            								        </li>
+            								        <!-------------------------------------------------------->
+              								    </ul>
+              							     </div>
+              								</nav>
+                            </div>            
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-follow">
+            <ul>
+                <li>
+                    <a href="https://in.linkedin.com/in/swapnali-redij-3557989b" target="_blank"><i class="fa fa-linkedin"></i></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="liswapnu@gmail.com" target="_blank"><i class="fa fa-google-plus"></i></a>
+                </li>
+            </ul>
+            <p>Follow Me</p>
+        </div>
+    </header>
+    <!-- navigation -->
 
 
-<div class="col-md-6 col-lg-5 col-xl-4 text-center">
-	<a class="text-img" href="about-us.html">
-		<span class="counter animated">10</span>
-	</a>
+
+
+
+
+
+
+
+<section class="slidersec">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+			<h1>I am a 
+			  <span
+			     class="txt-rotate"
+			     data-period="2000"
+			     data-rotate='[ "Web Designer.", "Freelancer.", "Developer.", "UI/UX Designer.", "fun!" ]'></span>
+			</h1>
+			<h2>I am a professional creative User Interface Designer & Developer involving with latest Web designing and technologies. My work speaks about my passion for this website designing field. </h2>
+			<a href="index.html#contacts" class="slidebtn">Contact Me</a>
+		</div>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="row">
+	<div class="container">
+	</div>
 </div>
-
-<br><br><br><br>
-<hr>
-<br>
+</section>
 
 
+<!---------------------------------------------------------->
+<section class="secpad section-about-1" id="aboutme">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5">
+				<div class="about-img">
+				    <img src="images/responsive2.png">
+			    </div>
+			</div>
+			<div class="col-lg-7">
+                <div class="about-content">
+                    <div class="section-title section-title-3">
+                        <h2><span>About Me</span></h2>
+                        <h3><span>Hello, I am Swapnali Redij</span></h3>
+                        <div class="divider divider-1"></div>
+                        <p>I work tirelessly towards turning ideas into expressive and creative designs, latest designs that communicate with and mesmerize the audience. Imagination is the key to creativity and I love to create amazing designs by going beyond imagination. </p>
+                    </div>   
+                    <ul class="row">
+                        <li class="col-12 col-sm-12 col-md-6">
+                            <div class="feature-item">
+                                <span class="icon"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                <div class="feature-item-content">
+                                    <h5>Web design</h5>
+                                    <p>Web design refers to the design of websites that refers to the user experience aspects of website development.</p>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        <li class="col-12 col-sm-12 col-md-6">
+                            <div class="feature-item">
+                                <span class="icon"><i class="fa fa-wordpress" aria-hidden="true"></i></span>
+                                <div class="feature-item-content">
+                                    <h5>CMS (Wordpress)</h5>
+                                    <p>WordPress is an open-source content management system written in PHP and paired with a MySQL or MariaDB database.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-12 col-sm-12 col-md-6">
+                            <div class="feature-item">
+                                <span class="icon"><i class="fa fa-paint-brush" aria-hidden="true"></i></span>
+                                <div class="feature-item-content">
+                                    <h5>UI/UX Designer</h5>
+                                    <p>It use to create user-friendly interfaces to understand complex technical products.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-12 col-sm-12 col-md-6">
+                            <div class="feature-item">
+                                <span class="icon"><i class="fa fa-code" aria-hidden="true"></i></span>
+                                <div class="feature-item-content">
+                                    <h5>Development</h5>
+                                    <p>Web development is the building and maintenance of websites.</p>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>                                                         
+                </div>
+            </div>
+		</div>
+	</div>
+</section>
+<!-------------------------------------------------------->
 
-<div class="col-md-6 col-lg-5 col-xl-4 text-center">
-	<a class="number-img" href="about-us.html">
-		<span class="">9876ABC</span>
-	</a>
+<!---------------------------------------------------------->
+<section id="portfolio" class="secpad bggray section-portfolio section-portfolio-1" id="portfolio" data-anchor="portfolio" style="z-index: 4; transform: translate3d(0px, 0px, 0px);">
+    <div class="display-screen">
+        <div class="section-title-2">
+            <div class="container">
+                <div class="inner max-w-576">
+                    <h2><span>Portfolio</span></h2>
+                    <h3>Let's See My Work</h3>
+                    <div class="divider divider-1-reverse divider-1-1"></div>
+                    <div class="divider divider-1-reverse divider-1-2"></div>
+                </div>
+                
+            </div>
+            <div class="container">
+            	<div class="row">
+            		<div class="col-md-4">
+            		    <div class="portfolio-item">
+	                        <div class="portfolio-image overlay-image" style="background-image: url(images/work-1.jpg)"></div>
+	                        <div class="portfolio-info">
+	                            <div class="portfolio-link portfolio-zoom">
+	                                <a href="http://apexproductionhouse.com/wpanimation/" class="button button-circle button-circle-md button-primary" title="Mobile Apps">
+	                                    <i class="ti-fullscreen"></i>
+	                                </a>
+	                            </div>
+                              <h3>Apex</h3>
+	                            <p>Responsive Website</p>
+	                            <!--<h4>Responsive Website</h4>-->
+	                        </div>
+	                    </div>
+	                </div>
+
+                  <!-----2-------->
+                  <div class="col-md-4">
+                    <div class="portfolio-item">
+                          <div class="portfolio-image overlay-image" style="background-image: url(images/work-2.jpg)"></div>
+                          <div class="portfolio-info">
+                              <div class="portfolio-link portfolio-zoom">
+                                  <a href="https://www.criczone.in/" class="button button-circle button-circle-md button-primary" title="Mobile Apps"  target="_blank">
+                                      <i class="ti-fullscreen"></i>
+                                  </a>
+                              </div>
+                              <h3>Criczone</h3>
+                              <p>Wordpress Website (CMS)</p>
+                              <!--<h4>Responsive Website</h4>-->
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-----3-------->
+                  <div class="col-md-4">
+                    <div class="portfolio-item">
+                          <div class="portfolio-image overlay-image" style="background-image: url(images/work-3.jpg)"></div>
+                          <div class="portfolio-info">
+                              <div class="portfolio-link portfolio-zoom">
+                                  <a href="http://mastergi.apexproductionhouse.com/" class="button button-circle button-circle-md button-primary" title="Mobile Apps"  target="_blank">
+                                      <i class="ti-fullscreen"></i>
+                                  </a>
+                              </div>
+                              <h3>Master Group of Institute</h3>
+                              <p>Wordpress Website (CMS)</p>
+                              <!--<h4>Responsive Website</h4>-->
+                          </div>
+                      </div>
+                  </div>
+            	</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--------------------------------->
+
+
+<section id="contacts">
+   <div class="container section-title-2">
+      <div class="inner max-w-576">
+          <h3><span>Contact Me</span></h3>
+          <p>I like to create things with open-minded people. Feel free to say hello!</p>
+          <div class="divider divider-1-reverse divider-1-1"></div>
+          <div class="divider divider-1-reverse divider-1-2"></div>
+      </div>
+      
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 cform">
+       <!-- <h4>Get in touch</h4>-->
+
+        <!--------form starts------------->
+        <form action="send-mail.php" method="POST">
+          <div class="form-group"> 
+              <div class="col-sm-6 pl0">       
+                  <input type="text" class="form-control" id="field_name" name="sender_name" placeholder="Name">     
+            </div>
+          </div>
+
+          <div class="form-group"> 
+              <div class="col-sm-6">   
+                  <input type="text" class="form-control" id="field_email" name="sender_email" placeholder="Your E-mail">
+             </div>
+          </div> 
+
+          <div class="form-group">
+              <div class="col-sm-6 pl0">    
+                  <input type="text" class="form-control" id="field_phone" name="sender_phone" placeholder="Phone">
+              </div> 
+          </div>
+
+          <div class="form-group">
+              <div class="col-sm-6">    
+                  <input type="text" class="form-control" id="field_subject" name="sender_subject"  placeholder="Subject">
+              </div>
+          </div>
+
+          <div class="form-group">
+              <div class="col-sm-12 pl0">    
+                  <textarea id="field_message" class="form-control" rows="7" name="sender_message"  placeholder="Message"></textarea>
+              </div>
+          </div>
+
+          <div class="form-group">
+              <div class="col-sm-12 pl0">
+                  <input type="submit" class="btn btn-info" name="send_message" value="Send"> 
+              </div>
+          </div>
+      </form>
+      <!--------form End------------->
+
+      </div>
+      <div class="col-md-6 cinfo section-about-1">
+        <ul style="list-style: none;padding-inline-start: 0px;padding-top: 15px;">
+        <li class="col-12 col-sm-12 col-md-6">
+            <div class="feature-item">
+                <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                <div class="feature-item-content">
+                    <h5>Email Id</h5>
+                    <p>liswapnu@gmail.com</p>
+                </div>
+            </div>
+        </li>
+
+        <li class="col-12 col-sm-12 col-md-6">
+            <div class="feature-item">
+                <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                <div class="feature-item-content">
+                    <h5>Contact No.</h5>
+                    <p>+91 8237541424</p>
+                </div>
+            </div>
+        </li>
+
+         <li class="col-12 col-sm-12 col-md-12">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60870.37436122478!2d73.4880030208449!3d17.536208825224136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2062c95f6f0ff%3A0x55c667ba59237eed!2sChiplun%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1620761428584!5m2!1sen!2sin" width="100%" height="230px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+         </li>
+
+      </ul>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!----------------------------->
+
+<section class="footer">
+  <div class="container copyright-section">
+          <div class="row">
+            <div class="col-md-12">
+              <p></p><center>© 2020 - All Rights Reserved Design by <a rel="nofollow" href="#">Swapnali R Redij</a></center><p></p>
+            </div>
+            
+          </div>
+        </div>
+</section>
+
+
+
+<!------------circular-text--------------------------------->
+<div class="" style="">
+  <div class="circular-text" title="Go to top" id="scroll" style="display: flex;">
+      <span id="rotated">Just •  Go Back • To • Top • Of • The  • Page • </span>
+  </div>
+  <div class="arrow"  id="scroll" >
+      <ion-icon name="arrow-up"></ion-icon>
+  </div>
 </div>
+<!------------//circular-text--------------------------------->
 
-<br><br>
-<hr>
-<br>
+<script type="text/javascript">
 
-<div class="bond-iconbox have-bg" style="width: 100%">
-    <div class="icon-image">
-        <span class="icon-shield icons">ABCD</span>
-    </div>
-    <div class="content">
-        <h4 class="title"><a href="#">Online Security</a></h4>
-        <p>Blor sit amet, consectetur adipisicing eLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temincididu</p>
-        <a class="readmore" href="blog_single_v1.html">More</a>
-    </div>
-</div>
+$(document).ready(function(){ 
+    $(window).scroll(function(){ 
+        if ($(this).scrollTop() > 100) { 
+            $('#scroll').fadeIn(); 
+        } else { 
+            $('#scroll').fadeOut(); 
+        } 
+    }); 
+    $('#scroll').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+        return false; 
+    }); 
+});
 
-<br><br>
-<hr>
-<br>
+</script>
 
-<div class="bond-iconbox have-bg" style="width: 100%">
-    <div class="icon-image">
-        <span class="icon-shield icons">ABCD</span>
-    </div>
-    <div class="content">
-        <h4 class="title"><a href="#">Online Security</a></h4>
-        <p>Blor sit amet, consectetur adipisicing eLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temincididu</p>
-        <a class="readmore" href="blog_single_v1.html">More</a>
-    </div>
-</div>
+<script>
+//Get the button
+var mybutton = document.getElementById("rotated");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+<script type="text/javascript">
+	var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+  document.body.appendChild(css);
+};
+</script>
+
+
+<script>
+  const circleType = new CircleType(
+      document.getElementById("rotated")
+  ).radius(80);
+
+  $(window).scroll(function() {
+      var offset = $(window).scrollTop();
+      offset = offset * 0.4;
+
+      $(".circular-text").css({
+          "-moz-transform": "rotate(" + offset + "deg)",
+          "-webkit-transform": "rotate(" + offset + "deg)",
+          "-o-transform": "rotate(" + offset + "deg)",
+          "-ms-transform": "rotate(" + offset + "deg)",
+          transform: "rotate(" + offset + "deg)"
+      });
+  });
+</script>
 
 
 
+<!-- Bootstrap -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.js"></script>
+<!-- slider -->
+<script src="js/main.js"></script>
+  <!-- JavaScript -->
+  <script src="js/vendors.js"></script>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="http://demo.afracode.com/miro/assets/js/main-scripts.js"></script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
