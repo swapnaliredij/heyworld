@@ -339,7 +339,7 @@ header .header-follow ul li a i{color: #000}
   position: absolute;top: 0; left: 0;
 }
 .slidersec .container{
-background-image: url(../images/clipart.png);
+background-image: url(clipart.png);
     background-repeat: no-repeat;
     min-height: 623px;
     background-position: right center;
