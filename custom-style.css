@@ -658,10 +658,11 @@ background-color: #000;
 
 /***********************************************************************/
 @media screen and (min-width: 320px) and (max-width: 640px) {
+section{ padding: 0px 20px }
 header .header-follow{ 
 right: 0;
     float: right;
-    margin-right: 16px;
+    margin-right: 7px;
     left: auto;
     background-color: #f2f2f2;
 }
@@ -710,13 +711,13 @@ background-image: none;
     padding-left: 15px;
 }
 .circular-text {
-    bottom: 2%;
-    right: 20%;
+    bottom: 0%;
+    right: 3%;
     font-size: 18px;
 }
 .arrow {
-    bottom: 5%;
-    right: 6%;
+    bottom: 4%;
+    right: -9%;
 }
 .about-img img {
     padding-top: 0;
